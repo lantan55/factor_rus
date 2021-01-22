@@ -8,6 +8,7 @@ import debug from "gulp-debug";
 import yargs from "yargs";
 import webpack from "webpack";
 import webpackStream from "webpack-stream";
+import browsersync from "browser-sync";
 
 const webpackConfig = require("../webpack.config.js");
 const argv = yargs.argv;
@@ -33,5 +34,6 @@ gulp.task("scripts", () => {
       debug({
         title: "JS files",
       })
-    );
+    )
+    .pipe(browsersync.stream());
 });

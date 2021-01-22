@@ -15,4 +15,5 @@ task("serve", () => {
   watch(paths.cssLibs.watch, parallel("cssLibs"));
   watch(paths.scripts.watch, parallel("scripts"));
   watch(paths.views.watch, parallel("views"));
+  watch(paths.images.watch, parallel("images"));
 });
