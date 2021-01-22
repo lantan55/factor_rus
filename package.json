@@ -74,6 +74,7 @@
     "yargs": "~13.2.4"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "^4.5.2",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
