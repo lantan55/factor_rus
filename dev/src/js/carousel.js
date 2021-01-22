@@ -4,6 +4,7 @@ $(".works__carousel").owlCarousel({
   loop: true,
   margin: 30,
   nav: false,
+  dots: false,
   autoplay: true,
   responsive: {
     0: {
@@ -14,6 +15,25 @@ $(".works__carousel").owlCarousel({
     },
     1000: {
       items: 4,
+    },
+  },
+});
+$(".clients__carousel").owlCarousel({
+  loop: false,
+  margin: 10,
+  nav: false,
+  dots: false,
+  autoplay: true,
+  items: 5,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
     },
   },
 });
