@@ -37,3 +37,22 @@ $(".clients__carousel").owlCarousel({
     },
   },
 });
+$(".reviews__carousel").owlCarousel({
+  loop: false,
+  margin: 30,
+  nav: false,
+  dots: false,
+  autoplay: true,
+  items: 3,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+});
