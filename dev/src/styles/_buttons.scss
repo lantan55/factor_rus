@@ -1,0 +1,16 @@
+.c-btn {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: $clr-red;
+  border: 1px solid transparent;
+  transition: $tr;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $clr-red;
+    transform: translateY(5px);
+  }
+}

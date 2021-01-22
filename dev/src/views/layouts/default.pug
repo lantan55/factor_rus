@@ -1,0 +1,31 @@
+block global
+    - const name = 'ФакторРус';
+    - const tagline = '';
+    - const logo = 'assets/img/logo.png';
+    - const phone_1 = '';
+    - const phone_2 = '';
+    - const mail_1 = '';
+    - const mail_2 = '';
+    - const address = '';
+    - const address_full = '';
+    - const schedule = ''
+    - 
+        const socials = [
+            {href: '#', name: 'facebook'},
+            {href: '#', name: 'instagram'}
+        ]
+
+block variables
+
+doctype html
+html(lang="ru")
+    include ../chunks/head
+    body
+        .wrapper
+            include ../chunks/aside
+            .page
+                include ../chunks/header
+                main
+                    block content
+                include ../chunks/footer
+        include ../chunks/scripts

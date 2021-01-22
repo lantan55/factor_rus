@@ -1,0 +1,21 @@
+// colors
+$clr-gray: #f4f4f4;
+$clr-red: #e51a4b;
+$clr-black: #000000;
+$clr-white: #ffffff;
+$clr-border: #e6e6e6;
+$clr-gray-text: #cacaca;
+
+// fonts
+$font-family-base: "GothamPro", Consolas;
+
+// animations
+$tr: all 0.3s;
+
+// cotainer
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px,
+);

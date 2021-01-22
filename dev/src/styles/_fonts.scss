@@ -1,0 +1,36 @@
+@include font-face(
+  "GothamPro",
+  "../fonts/GothamPro/GothamPro-Bold",
+  bold,
+  normal
+);
+@include font-face(
+  "GothamPro",
+  "../fonts/GothamPro/GothamPro-BoldItalic",
+  bold,
+  italic
+);
+@include font-face(
+  "GothamPro",
+  "../fonts/GothamPro/GothamPro-Italic",
+  normal,
+  italic
+);
+@include font-face(
+  "GothamPro",
+  "../fonts/GothamPro/GothamPro-Light",
+  100,
+  normal
+);
+@include font-face(
+  "GothamPro",
+  "../fonts/GothamPro/GothamPro-LightItalic",
+  100,
+  italic
+);
+@include font-face(
+  "GothamPro",
+  "../fonts/GothamPro/GothamPro-Medium",
+  normal,
+  normal
+);
