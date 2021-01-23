@@ -1,0 +1,23 @@
+.about-content {
+  .about-list {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &--dark {
+      background-color: $clr-gray-light;
+    }
+    &__content {
+      padding: 2rem 4rem;
+    }
+    &__img {
+      padding: 2rem;
+    }
+  }
+  h2 {
+    margin-bottom: 2rem;
+    color: $clr-red;
+  }
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
