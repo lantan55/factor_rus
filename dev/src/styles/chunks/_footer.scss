@@ -1,6 +1,6 @@
 .footer {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   background: $clr-black;
 
   .contacts {
@@ -95,6 +95,15 @@
           text-decoration: underline;
         }
       }
+    }
+  }
+  .copyright {
+    margin-top: 3rem;
+    color: darken($color: $clr-white, $amount: 50%);
+    text-align: center;
+    p {
+      margin-bottom: 0;
+      font-size: 0.8rem;
     }
   }
 }
