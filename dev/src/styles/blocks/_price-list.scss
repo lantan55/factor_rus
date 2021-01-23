@@ -1,0 +1,44 @@
+.price-list {
+  padding: 3rem;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: $clr-red;
+    text-transform: uppercase;
+  }
+
+  .item {
+    padding: 2rem 0;
+    border-bottom: 2px solid $clr-border;
+    &:last-child {
+      border-bottom: 0;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__img {
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__text {
+      font-size: 1rem;
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    &__btn {
+      a {
+        padding: 0.5rem 3rem;
+        &:hover {
+          color: $clr-red;
+          text-decoration: none;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

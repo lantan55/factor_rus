@@ -27,14 +27,27 @@
 
   &__title {
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     padding: 2rem;
-    background-color: $clr-black;
+    background-color: rgba($clr-black, 0.7);
     h1 {
       color: $clr-white;
       font-weight: bold;
       font-size: 4rem;
       line-height: 3.9rem;
       text-transform: uppercase;
+    }
+  }
+  &__btn {
+    a {
+      padding: 0.7rem 1rem;
+      text-decoration: none;
+      &:hover {
+        color: $clr-red;
+        background-color: transparent;
+      }
     }
   }
 }

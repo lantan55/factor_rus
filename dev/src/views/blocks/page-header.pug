@@ -1,6 +1,9 @@
 section.page-header.container
   .page-header__wrap
-    img.page-header__bg(src="assets/img/pages/about/about_1.png", alt="")
+    img.page-header__bg(src=page_img, alt="")
     .page-header__block
       .page-header__title
-        h1 О КОМПАНИИ
+        h1 #{page_title}
+        if page_button
+          .page-header__btn
+            a.c-btn(href="#") #{page_button}

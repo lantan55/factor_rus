@@ -1,0 +1,12 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block content
+  - const page_title = 'Композитные короба';
+  - const page_img = 'assets/img/pages/kompozitnie_koroba.png';
+  - const page_button = 'Отправить заявку';
+  main 
+    .content
+      include ../blocks/page-header
+      include ../blocks/page-content
+      include ../blocks/price-list

@@ -4,7 +4,7 @@ import { series, parallel } from "gulp";
 const requireDir = require("require-dir");
 const paths = {
   views: {
-    src: ["./dev/src/views/index.pug", "./dev/src/views/pages/*.pug"],
+    src: ["./dev/src/views/index.pug", "./dev/src/views/pages/**/*.pug"],
     dist: "./dev/dist/",
     watch: ["./dev/src/views/**/*.pug"],
   },
@@ -60,6 +60,9 @@ export const development = series(
   "serve"
 );
 
-export const prod = series("clean", series(["styles", "scripts", "views", "images", "fonts"]));
+export const prod = series(
+  "clean",
+  series(["styles", "scripts", "views", "images", "fonts"])
+);
 
 export default development;
