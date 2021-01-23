@@ -46,7 +46,8 @@
         text-decoration: none;
         transition: $tr;
         &:hover {
-          text-decoration: underline;
+          color: darken($color: $clr-red, $amount: 10%);
+          text-decoration: none;
         }
       }
     }

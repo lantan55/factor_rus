@@ -60,6 +60,6 @@ export const development = series(
   "serve"
 );
 
-export const prod = series("clean", series(["styles", "scripts"]));
+export const prod = series("clean", series(["styles", "scripts", "views", "images", "fonts"]));
 
 export default development;
