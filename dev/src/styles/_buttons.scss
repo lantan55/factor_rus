@@ -6,10 +6,12 @@
   text-align: center;
   text-transform: uppercase;
   background: $clr-red;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: $tr;
   &:hover {
+    color: $clr-red;
+    text-decoration: none;
     background-color: transparent;
-    border: 1px solid $clr-red;
+    border: 2px solid $clr-red;
   }
 }

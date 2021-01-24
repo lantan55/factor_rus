@@ -1,0 +1,60 @@
+section.calc
+  .container
+    h2.calc__title РАСЧЕТ СТОИМОСТИ ОНЛАЙН
+    .row
+      .calc__form.col-md-9
+        .row
+          .calc__field.col-md-12
+            h4.calc__subtitle ШАГ 1   
+              span - ВЫБЕРИТЕ ТИП СВЕЧЕНИЯ ВЫВЕСКИ
+            .calc__radio
+              .r-toggle.active
+                img.r-toggle__title(src="assets/img/calc/type1.png", alt="")
+                input.j-input(type="radio" data-val="100" name="type" id="type1" checked)
+                label.r-toggle__title(for="type1") Несветовые буквы 
+              .r-toggle
+                img.r-toggle__title(src="assets/img/calc/type2.png", alt="")
+                input.j-input(type="radio" data-val="200" name="type" id="type2")
+                label.r-toggle__title(for="type2") Фронтальное свечение
+              .r-toggle
+                img.r-toggle__title(src="assets/img/calc/type3.png", alt="")
+                input.j-input(type="radio" data-val="300" name="type" id="type3")
+                label.r-toggle__title(for="type3") Контражурное свечение 
+              .r-toggle
+                img.r-toggle__title(src="assets/img/calc/type4.png", alt="")
+                input.j-input(type="radio" data-val="400" name="type" id="type4")
+                label.r-toggle__title(for="type4") Торцевая подсветка 
+          .calc__field.col-md-6
+            h4.calc__subtitle ШАГ 2 
+              span - ВВЕДИТЕ ТЕКСТ ВЫВЕСКИ
+            .calc__input
+              input.j-input(type="text" id="name")
+          .calc__field.col-md-6
+            h4.calc__subtitle.calc__subtitle--disabled КОЛИЧЕСТВО БУКВ 
+            .calc__input
+              input.input__disabled.j-input(type="text", disabled id="count")
+          .calc__field.col-md-6
+            .calc__field.mt-0
+              h4.calc__subtitle ШАГ 3  
+                span - ВВЕДИТЕ ВЫСОТУ БУКВЫ    
+              .calc__input
+                input.j-input(type="number"  id="height")
+            .calc__field
+              h4.calc__subtitle ШАГ 4 
+                span - НУЖНА ПОДЛОЖКА
+              .calc__btn-group
+                .calc__btn-group__item
+                  button.c-btn(role="button") да
+                  input.j-input(type="radio", data-val="20000" name="answer" id="answer1" )
+                .calc__btn-group__item.active
+                  button.c-btn(role="button") нет
+                  input.j-input(type="radio", data-val="0" name="answer" id="answer2" checked)
+          .calc__field.col-md-6  
+            .result
+              h4.calc__subtitle СТОИМОСТЬ ВАШЕЙ ВЫВЕСКИ 
+              div.result__text 
+                span#result 
+              a.c-btn.calc__btn#calc(href="#" ) Рассчитать
+            
+
+        
