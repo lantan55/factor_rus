@@ -1,4 +1,7 @@
 import "./carousel";
+import "@fancyapps/fancybox";
+import "@fancyapps/fancybox/dist/jquery.fancybox.css";
+
 $(function ($) {
   $(document).on("click touchend", ".r-toggle", function () {
     $(".r-toggle").removeClass("active");
@@ -26,29 +29,42 @@ $(function ($) {
     }
   });
 
+  $(document).on("keyup", 'input[type="number"]', function () {
+    const v = parseInt($(this).val());
+    const min = parseInt($(this).attr("min"));
+    const max = parseInt($(this).attr("max"));
+
+    if (v < min) {
+      $(this).val(min);
+    } else if (v > max) {
+      $(this).val(max);
+    }
+  });
+
   const resultLabel = Number($("#result").text());
 
-  $(document).on("click", "#calc", function (e) {
-    e.preventDefault();
-
+  $(document).on("change keyup", function () {
     const type = $(".r-toggle input[type='radio']:checked").data("val");
     const count = Number($("#count").val());
     const height = Number($("#height").val());
     const subs = $("#answer1:checked").data("val");
     let result;
     if (subs) {
-      result = type * height * count + subs;
+      result = (type * height * count + subs).toLocaleString();
     } else {
-      result = type * height * count;
+      result = (type * height * count).toLocaleString();
     }
-    console.log(type, count, height, subs);
 
     if (!(type && count && height)) {
-      $("#result").addClass("error").text("Заполните все поля");
+      $("#result").addClass("error").text("");
     } else {
       $("#result")
         .removeClass("error")
         .text(result + " руб");
     }
+  });
+  $(document).on("click touchend", "#calc", function (e) {
+    e.preventDefault();
+    $.fancybox.open($("#modalCalc"));
   });
 });
