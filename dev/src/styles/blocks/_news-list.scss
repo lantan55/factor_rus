@@ -1,0 +1,43 @@
+.news-list {
+  padding: 3rem 3rem 5rem 3rem;
+
+  .card {
+    margin-top: 2rem;
+    padding: 2rem;
+    text-decoration: none;
+    background-color: $clr-white;
+    transition: $tr;
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__img {
+      img {
+        width: 400px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+    &__title {
+      h4 {
+        color: $clr-red;
+        font-size: 1.5rem;
+        text-transform: none;
+      }
+    }
+    &__date {
+      margin-top: 1rem;
+      span {
+        color: $clr-gray-text-dark;
+        font-size: 1.1rem;
+      }
+    }
+    &__text {
+      margin-top: 1rem;
+      p {
+        color: $clr-black;
+        font-size: 1rem;
+      }
+    }
+  }
+}
