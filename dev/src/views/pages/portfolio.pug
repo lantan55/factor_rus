@@ -1,0 +1,14 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block content
+  - const page_title = 'Наши работы';
+  - const page_img = 'assets/img/pages/portfolio.png';
+  - const page_button = '';
+  - const content_title = 'НАШЕ ПОРТФОЛИО';
+  - const content_desc = 'Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация. Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация Какая-то информация';
+  main 
+    .content
+      include ../blocks/page-header
+      include ../blocks/page-content
+      include ../blocks/portfolio-list
