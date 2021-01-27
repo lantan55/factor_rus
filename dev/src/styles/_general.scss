@@ -17,6 +17,9 @@ body {
 .page {
   width: 100%;
   margin-left: 100px;
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 .container-fluid {
   padding-right: 40px;

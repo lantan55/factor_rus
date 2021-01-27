@@ -1,6 +1,9 @@
 .aside {
-  // .aside__list
   padding: 2rem 0.5rem 1rem 0.5rem;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 
   &__list {
     display: flex;
@@ -13,8 +16,6 @@
     list-style-type: none;
   }
 
-  // .aside__item
-
   &__item {
     a {
       display: block;
@@ -22,8 +23,6 @@
       height: 100%;
     }
   }
-
-  // .aside__icon
 
   &__icon {
     display: block;
