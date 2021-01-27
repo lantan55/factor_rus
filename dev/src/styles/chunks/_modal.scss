@@ -1,5 +1,13 @@
 .modal {
   border: 2px solid $clr-red;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
   h2 {
     margin-bottom: 2rem;
     color: $clr-red;

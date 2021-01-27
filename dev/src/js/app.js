@@ -63,8 +63,13 @@ $(function ($) {
         .text(result + " руб");
     }
   });
-  $(document).on("click touchend", "#calc", function (e) {
+  $(document).on("click touchend", "#calc, #openCalcModal", function (e) {
     e.preventDefault();
+
     $.fancybox.open($("#modalCalc"));
+  });
+  $(document).on("click touchend", "#openModalPhone", function (e) {
+    e.preventDefault();
+    $.fancybox.open($("#modalPhone"));
   });
 });

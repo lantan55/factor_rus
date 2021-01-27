@@ -28,3 +28,25 @@
                     textarea.input-field.input-field--area( id="text" placeholder="Прочая информация о заказе")
                   .col-md-12
                     p.form__notice Нажимая на кнопку, вы даете согласие на обработку персональных данных 
+#modalPhone.modal
+  .modal__wrap.container
+    .row.justify-content-center.align-items-center
+      .col-md-6
+        h2 Заказать обратный звонок
+        form(action="")
+          .row
+            .col-md-12
+              h4 Укажите контактные данные
+              .row
+                .col-md-12
+                  input.input-field(type="text" id="company" placeholder="Название компании")
+                .col-md-12
+                  input.input-field(type="text" id="name" placeholder="Ваше имя")
+                .col-md-12
+                  input.input-field(type="text" id="phone" placeholder="Ваш телефон")
+                .col-md-12
+                  textarea.input-field.input-field--area( id="text" placeholder="Дополнительная информация")
+                .col-md-12
+                  p.form__notice Нажимая на кнопку, вы даете согласие на обработку персональных данных 
+                  button.c-btn.form__btn(role="submit") Отправить
+            
