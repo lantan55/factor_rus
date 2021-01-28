@@ -1,5 +1,9 @@
 .info-block {
+  display: none;
   margin-top: 4rem;
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
   &__wrap {
     width: 100%;
     height: 400px;

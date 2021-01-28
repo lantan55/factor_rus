@@ -1,24 +1,40 @@
 .header {
-  position: fixed;
-  z-index: 998;
-  background-color: $clr-white;
-	width: 100%;
-	transition: all .3s ease;
-  top: 0; 
+  position: sticky;
+  top: 0;
   left: 0;
+  z-index: 998;
+  width: 100%;
   padding-top: 20px;
-  
-  &--scrolled{
-    
-    
-    
+  background-color: $clr-white;
+  transition: all 0.3s ease;
+  @include media-breakpoint-up(sm) {
+    padding-top: 1rem;
+  }
+
+  @media (max-width: 767px) {
+    background-color: $clr-white;
+  }
+
+  @media (max-width: 420px) {
+    // padding: 1rem 0;
+    background-color: $clr-white;
+  }
+
+  &__row {
+  }
+  &__col {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    @include media-breakpoint-up(sm) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &--scrolled {
     // margin-left: 100px;
     transform: translateY(-100%);
-  }
-  
-  @media (max-width: 767px) {
-    padding: 1rem 0;
-    background-color: $clr-white;
   }
   &__slogan {
     padding: 0;
@@ -37,6 +53,7 @@
   &__contacts-list {
     display: flex;
     gap: 1rem;
+    justify-content: flex-end;
     @media (max-width: 767px) {
       flex-direction: column;
       gap: 0;
@@ -95,16 +112,20 @@
 
   &__toolbar {
     background: $clr-red;
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
   }
 
   .toolbar {
-    padding: 0.2rem 2.5rem;
     &__list {
       display: flex;
       justify-content: space-between;
       // padding: 0 2rem;
     }
     &__item {
+      display: flex;
+      align-items: center;
       height: 40px;
       img {
       }

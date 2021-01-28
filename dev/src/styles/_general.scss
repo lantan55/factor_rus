@@ -17,7 +17,7 @@ body {
 .page {
   width: 100%;
   margin-left: 100px;
-  padding-top: 140px;
+  // padding-top: 140px;
   @media (max-width: 767px) {
     margin-left: 0;
   }
@@ -38,6 +38,18 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
 }
-h2 {
+
+h1 {
   font-size: 2rem;
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    justify-content: center;
+  }
+}
+h2 {
+  font-size: 1.6rem;
+  text-align: center;
+  @include media-breakpoint-up(sm) {
+    font-size: 2rem;
+  }
 }

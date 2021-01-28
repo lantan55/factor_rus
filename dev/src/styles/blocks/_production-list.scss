@@ -1,8 +1,15 @@
 .production-list {
-  margin-top: 4rem;
+  padding: 2rem 0;
+  @include media-breakpoint-up(sm) {
+    padding: 4rem 0;
+  }
 
   h2 {
+    margin-bottom: 0;
     color: $clr-red;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 2rem;
+    }
   }
 
   .card {
@@ -39,8 +46,12 @@
     &__title {
       color: $clr-black;
       font-size: 1.3rem;
+      text-align: center;
       text-transform: none;
       transition: $tr;
+      @include media-breakpoint-up(sm) {
+        text-align: center;
+      }
     }
   }
 

@@ -1,15 +1,15 @@
 header.header
   .container
-    .row.justify-content-sm-between.mx-4.mb-2
-      .col-6.col-md-3
+    .row.header__row
+      .col-12.col-sm-6.col-md-3.header__col
         a(href="/")
           img(src="assets/img/logo.png", alt="")
-      .col-md-3.d-none.d-md-block
+      .col-md-3.d-none.d-md-block.header__col
         ul.header__slogan
           li Рекламно-
           li производственная
           li компания
-      .col-6.col-md-6
+      .col-12.col-sm-6.col-md-6.header__col
         .header__contacts-list
           .header__contacts
             a.contact(href="tel:+7 (495) 663-50-72")
@@ -40,11 +40,10 @@ header.header
             a(href="/news.html") Блог
           li 
             a(href="/contacts.html") Контакты
-    .row.d-sm-block.d-md-none.header__toolbar.toolbar
-      .container
-        .toolbar__list
-          .toolbar__item
-            img(src="assets/img/icons/calc_hor.png", alt="")
-          .toolbar__item
-            img(src="assets/img/icons/menu.png", alt="")
+    .row.header__toolbar.toolbar
+      .col-12.toolbar__list
+        .toolbar__item
+          img(src="assets/img/icons/calc_hor.png", alt="")
+        .toolbar__item
+          img(src="assets/img/icons/menu.png", alt="")
         

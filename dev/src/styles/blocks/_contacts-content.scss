@@ -6,7 +6,7 @@ section.contacts-content {
     h2 {
       padding-bottom: 1rem;
       color: $clr-red;
-      font-size: 2rem;
+      font-size: 2.5rem;
       text-transform: uppercase;
     }
     &__item {
@@ -39,7 +39,7 @@ section.contacts-content {
 
     h2 {
       color: $clr-red;
-      font-size: 2rem;
+      font-size: 2.5rem;
       text-transform: uppercase;
     }
 
@@ -55,9 +55,10 @@ section.contacts-content {
       &--area {
         height: 11rem;
       }
-      &:active, &:focus{
-        outline: none;
+      &:active,
+      &:focus {
         border: 1px solid darken($color: $clr-border, $amount: 20%);
+        outline: none;
       }
     }
     .form__notify {

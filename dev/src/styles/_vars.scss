@@ -15,6 +15,15 @@ $font-family-base: "GothamPro", Consolas;
 // animations
 $tr: all 0.3s;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 420px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
 // cotainer
 $container-max-widths: (
   sm: 100%,
