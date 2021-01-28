@@ -1,5 +1,21 @@
 .header {
+  position: fixed;
+  z-index: 998;
+  background-color: $clr-white;
+	width: 100%;
+	transition: all .3s ease;
+  top: 0; 
+  left: 0;
   padding-top: 20px;
+  
+  &--scrolled{
+    
+    
+    
+    // margin-left: 100px;
+    transform: translateY(-100%);
+  }
+  
   @media (max-width: 767px) {
     padding: 1rem 0;
     background-color: $clr-white;

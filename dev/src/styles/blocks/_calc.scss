@@ -51,11 +51,16 @@
     height: 3rem;
     padding: 0.2rem 1rem;
     font-size: 1.2rem;
-    background-color: $clr-gray;
-    border: 1px solid $clr-black;
+    background-color: $clr-white;
+    border: 1px solid $clr-border;
     &.input__disabled {
       width: 200px;
+      background: $clr-gray;
     }
+    &:active, &:focus{
+        outline: none;
+        border: 1px solid darken($color: $clr-border, $amount: 20%);
+      }
   }
   .result {
     display: flex;

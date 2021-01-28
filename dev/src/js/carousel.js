@@ -20,7 +20,7 @@ $(".works__carousel").owlCarousel({
 });
 $(".clients__carousel").owlCarousel({
   loop: false,
-  margin: 10,
+  margin: 20,
   nav: false,
   dots: false,
   autoplay: true,

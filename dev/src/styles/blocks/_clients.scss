@@ -1,9 +1,10 @@
 .clients {
   margin-top: 2rem;
+  background: $clr-border;
 
   &__wrap {
     padding: 3rem 0 3rem 0;
-    background: $clr-border;
+    
   }
 
   &__title {
@@ -16,14 +17,20 @@
   }
   .item {
     cursor: pointer;
+    background: $clr-white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
     a {
       display: flex;
       justify-content: center;
       width: 100%;
-      height: 100%;
+      // height: 100%;
     }
     img {
-      width: 120px;
+      // width: 120px;
       height: 100%;
       filter: grayscale(100%);
       transition: $tr;

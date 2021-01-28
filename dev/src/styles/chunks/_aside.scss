@@ -1,5 +1,6 @@
 .aside {
   padding: 2rem 0.5rem 1rem 0.5rem;
+  z-index: 999;
 
   @media (max-width: 767px) {
     display: none;
