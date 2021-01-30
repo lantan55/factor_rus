@@ -1,13 +1,13 @@
 const $header = $(".header");
 let scrollPrev = 0;
 const cls = "header--scrolled";
-// const $sumenus = $header.find(".submenu__list");
+const $sumenus = $header.find(".dropdown__list");
 
 $(window).on("scroll", function () {
   const scrolled = $(window).scrollTop();
-  // const anyOpenSubmenu = $sumenus.css("visibility") === "visible";
+  const $anyOpenSubmenu = $sumenus.hasClass("show");
 
-  // if (anyOpenSubmenu) return;
+  if ($anyOpenSubmenu) return;
   if (scrolled > 50 && scrolled > scrollPrev) {
     $header.addClass(cls);
   } else {
