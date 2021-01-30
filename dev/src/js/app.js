@@ -2,6 +2,7 @@ import "./carousel";
 import "@fancyapps/fancybox";
 import "@fancyapps/fancybox/dist/jquery.fancybox.css";
 import "./header";
+import "./dropdown";
 
 $(function ($) {
   $(document).on("click touchend", ".r-toggle", function () {

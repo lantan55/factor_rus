@@ -28,7 +28,12 @@
     margin-bottom: 0.5rem;
     @include media-breakpoint-up(sm) {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
+    }
+    &:last-child {
+      @include media-breakpoint-up(sm) {
+        justify-content: flex-end;
+      }
     }
   }
 
