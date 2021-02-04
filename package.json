@@ -76,6 +76,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "^4.5.2",
+    "hc-offcanvas-nav": "^6.1.1",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
     "jquery-validation": "^1.19.2",

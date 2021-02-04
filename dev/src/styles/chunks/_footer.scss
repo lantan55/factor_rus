@@ -1,13 +1,33 @@
 .footer {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
   background: $clr-black;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 1rem;
+
+    h4 {
+      text-align: left;
+    }
+  }
+  h4 {
+    text-align: center;
+  }
+  &__menu {
+    padding-top: 3rem;
+  }
+  &__info {
+    align-items: center;
+    @include media-breakpoint-up(sm) {
+      align-items: flex-start;
+    }
+  }
 
   .contacts {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    align-items: flex-start;
+
     justify-content: space-between;
     &__logo {
     }
@@ -74,10 +94,15 @@
     }
   }
   ul {
+    display: none;
     margin: 0;
     margin-top: 1rem;
     padding: 0;
     list-style-type: none;
+
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
     li {
       margin-top: 0.2rem;
       line-height: 1rem;

@@ -1,6 +1,7 @@
 .news-list {
   padding: 3rem 3rem 5rem 3rem;
-
+  @include media-breakpoint-up(sm) {
+  }
   .card {
     margin-top: 2rem;
     padding: 2rem;

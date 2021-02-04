@@ -8,7 +8,7 @@ $(".works__carousel").owlCarousel({
   autoplay: true,
   responsive: {
     0: {
-      items: 3,
+      items: 2,
     },
     420: {
       items: 3,
@@ -27,7 +27,7 @@ $(".clients__carousel").owlCarousel({
   items: 5,
   responsive: {
     0: {
-      items: 1,
+      items: 2,
     },
     600: {
       items: 3,

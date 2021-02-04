@@ -1,7 +1,13 @@
 .reviews {
-  padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background: $clr-gray;
+
+  @include media-breakpoint-up(sm) {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
   &__wrap {
     margin-top: 2rem;
   }
@@ -19,15 +25,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    padding: 1rem;
     background: $clr-white;
+
+    @include media-breakpoint-up(sm) {
+      padding: 2rem 4rem;
+    }
 
     &__img {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
+      @include media-breakpoint-up(sm) {
+        width: 200px;
+        height: 200px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -35,27 +49,45 @@
       }
     }
     &__title {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       color: $clr-red;
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      text-align: center;
       text-transform: none;
+      @include media-breakpoint-up(sm) {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+      }
     }
     &__subtitle {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       color: $clr-gray-text-dark;
       font-weight: 400;
-      font-size: 1.1rem;
+      font-size: 1rem;
+      text-align: center;
       text-align: center;
       text-transform: none;
+      @include media-breakpoint-up(sm) {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+      }
     }
     &__text {
-      margin-top: 2rem;
+      margin-top: 1rem;
       color: $clr-black;
       font-weight: 400;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       text-align: center;
       text-transform: none;
+      @include media-breakpoint-up(sm) {
+        margin-top: 2rem;
+        color: $clr-black;
+        font-weight: 400;
+        font-size: 0.9rem;
+        text-align: center;
+        text-transform: none;
+      }
     }
   }
 }

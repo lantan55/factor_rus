@@ -25,85 +25,25 @@ header.header
               span.contact__title zakaz@factorrus.ru        
     .row
       nav.top-menu.col-md-9.offset-md-3
-        ul.top-menu__list
-          li.top-menu__item.active 
-            a.top-menu__link(href="/") Главная
-          li.top-menu__item 
-            a.top-menu__link(href="/about.html") О нас
-          li.top-menu__item.dropdown
-            a.top-menu__link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Продукция
-            ul.dropdown__list.dropdown-menu(aria-labelledby='')
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/obiemnye-bukvi.html") Объёмные буквы
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/svetovie-koroba.html") Световые короба
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/kompozitnie-koroba.html") Композитные короба
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/kristalayti.html") Кристалайты
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/falshfasadi.html") Фальшфасады
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/ploskie-bukvi.html") Плоские буквы (несветовые)
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/informacionnie-stendi.html") Информационные стенды
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/svetovie-paneli.html") Световые панели (лайтиксы)
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/rostovie-figuri.html") Ростовые фигуры
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/shirokoformatnaya-pechat.html") Широкоформатная печать
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/krishnie-ustanovki.html") Крышные установки
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/panel-kronshtein.html") Панель-кронштейн (Консоль)
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/press-vol.html") Пресс-вол
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/freim-layti.html") Фрейм-лайты
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/akrilayti.html") Акрилайты
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/neonovie-viveski.html") Неоновые вывески
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/navigaciya.html") Навигация (таблички, указатели)
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/domovie-znaki.html") Домовые знаки
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/shtenderi.html") Штендеры
-              li.dropdown__item 
-                a.dropdown__link(href="/produckciya/led-ekrani.html") LED-экраны              
-          li.top-menu__item.dropdown
-            a.top-menu__link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Услуги
-            ul.dropdown-menu.dropdown__list(aria-labelledby='')
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/montazh-konstrukciy.html") Монтаж конструкция
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/demontazh-konstrukciy.html") Демонтаж конструкций
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/remont-konstrukciy.html") Ремонт конструкций
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/frezerovka.html") Фрезеровка
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/lazernaya-rezka.html") Лазерная резка
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/okleyka.html") Оклейка
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/dizain.html") Дизайн
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/proektirovanie.html") Проектирование
-              li.dropdown__item
-                a.dropdown__link(href="/uslugi/soglasovanie.html") Согласование
-          li.top-menu__item 
-            a.top-menu__link(href="/portfolio.html") Портфолио
-          li.top-menu__item 
-            a.top-menu__link(href="/news.html") Блог
-          li.top-menu__item 
-            a.top-menu__link(href="/contacts.html") Контакты
-    .row.header__toolbar.toolbar
-      .col-12.toolbar__list
-        .toolbar__item
+        a.navbar-brand(href='#') 
           img(src="assets/img/icons/calc_hor.png", alt="")
-        .toolbar__item
-          img(src="assets/img/icons/menu.png", alt="")
+        #navbarToggler
+          ul.top-menu__list
+            each item in menu
+              if item.submenu
+                li.top-menu__item.dropdown
+                  a.top-menu__link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') #{item.title}
+                  ul.dropdown-menu(aria-labelledby='')
+                    each subitem in item.submenu
+                      li.dropdown-item
+                        a.dropdown-link( href=subitem.href ) #{subitem.title}
+              else
+                li.top-menu__item
+                  a.top-menu__link( href=item.href ) #{item.title}      
+    //- .row.header__toolbar.toolbar
+    //-   .col-12.toolbar__list
+    //-     .toolbar__item
+    //-       img(src="assets/img/icons/calc_hor.png", alt="")
+    //-     .toolbar__item
+    //-       img(src="assets/img/icons/menu.png", alt="")
         

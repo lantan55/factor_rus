@@ -4,11 +4,12 @@
   left: 0;
   z-index: 998;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 1rem;
   background-color: $clr-white;
   transition: all 0.3s ease;
   @include media-breakpoint-up(sm) {
     padding-top: 1rem;
+    padding-top: 20px;
   }
 
   @media (max-width: 767px) {
@@ -114,26 +115,14 @@
       }
     }
   }
+}
 
-  &__toolbar {
-    background: $clr-red;
-    @include media-breakpoint-up(sm) {
-      display: none;
-    }
+.navbar {
+  background: $clr-red;
+  @include media-breakpoint-up(md) {
+    background: transparent;
   }
-
-  .toolbar {
-    &__list {
-      display: flex;
-      justify-content: space-between;
-      // padding: 0 2rem;
-    }
-    &__item {
-      display: flex;
-      align-items: center;
-      height: 40px;
-      img {
-      }
-    }
+  &-toggler {
+    background-color: white;
   }
 }
