@@ -2,15 +2,15 @@ import HcOffcanvasNav from "hc-offcanvas-nav";
 import "hc-offcanvas-nav/dist/hc-offcanvas-nav.carbon.css";
 
 document.addEventListener("DOMContentLoaded", function () {
-  new HcOffcanvasNav("#navbarToggler", {
+  new HcOffcanvasNav("#sidebarNav", {
     position: "right",
-
     disableAt: 993,
-    // pushContent: ".wrapper",
+    customToggle: $(".toggle-btn"),
     closeOnClick: true,
     disableBody: true,
     levelTitles: true,
     levelTitleAsBack: true,
+    labelBack: "Назад",
   });
 });
 

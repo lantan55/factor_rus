@@ -33,7 +33,7 @@ $(".clients__carousel").owlCarousel({
       items: 3,
     },
     1000: {
-      items: 5,
+      items: 7,
     },
   },
 });

@@ -1,14 +1,71 @@
 .price-list {
-  padding: 3rem;
+  padding: 1rem 0;
+
+  @include media-breakpoint-up(sm) {
+    padding: 3rem;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: $clr-red;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    .item {
+      padding: 2rem 0;
+      border-bottom: 2px solid $clr-border;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &__img {
+        margin-top: 0;
+      }
+      &__title {
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+      &__text {
+        font-size: 1rem;
+      }
+      &__price {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      &__btn {
+        display: inline;
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 250px;
+          height: 40px;
+          padding: 0;
+          text-align: center;
+          &:hover {
+            color: $clr-red;
+            text-decoration: none;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
 
   h2 {
     margin-bottom: 1rem;
     color: $clr-red;
+    font-size: 1.5rem;
     text-transform: uppercase;
   }
 
   .item {
-    padding: 2rem 0;
+    margin-top: 2rem;
+    padding: 0;
     border-bottom: 2px solid $clr-border;
     &:last-child {
       border-bottom: 0;
@@ -19,19 +76,31 @@
       justify-content: space-between;
     }
     &__img {
+      margin-top: 0.5rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     &__title {
-      font-size: 1.5rem;
-    }
-    &__text {
+      margin-top: 1rem;
       font-size: 1rem;
     }
+    &__text {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      font-size: 0.8rem;
+    }
     &__price {
+      margin-top: 0.5rem;
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     &__btn {
+      display: flex;
+      margin-top: 0.5rem;
       a {
+        width: 100%;
         padding: 0.5rem 3rem;
         &:hover {
           color: $clr-red;

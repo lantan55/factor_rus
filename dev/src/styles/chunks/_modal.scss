@@ -1,23 +1,20 @@
 .modal {
   border: 2px solid $clr-red;
 
-  &__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-  h2 {
-    margin-bottom: 2rem;
-    color: $clr-red;
-    font-size: 2rem;
-  }
-  h4 {
-    font-weight: 400;
-    font-size: 1.1rem;
-  }
-  .input-field {
+  @include media-breakpoint-up(sm) {
+    padding: 3rem;
+
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+
+    .input-field {
       width: 100%;
       height: 3rem;
       margin-top: 1rem;
@@ -29,11 +26,50 @@
       &--area {
         height: 11rem;
       }
-      &:active, &:focus{
-        outline: none;
+      &:active,
+      &:focus {
         border: 1px solid darken($color: $clr-border, $amount: 20%);
+        outline: none;
       }
     }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    color: $clr-red;
+    font-size: 1.2rem;
+  }
+  h4 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+  .input-field {
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.5rem;
+    padding: 0.2rem 1rem;
+    font-size: 0.8rem;
+    background-color: $clr-white;
+    border: 1px solid $clr-border;
+    transition: $tr;
+    &--area {
+      height: 5rem;
+    }
+    &:active,
+    &:focus {
+      border: 1px solid darken($color: $clr-border, $amount: 20%);
+      outline: none;
+    }
+  }
   .form__notify {
     display: flex;
     align-items: flex-end;
@@ -53,5 +89,12 @@
     margin-bottom: 0;
     color: $clr-gray-text-dark;
     font-size: 0.8rem;
+  }
+}
+
+.fancybox-content {
+  padding: 1rem !important;
+  @include media-breakpoint-up(sm) {
+    padding: 3rem;
   }
 }

@@ -1,10 +1,52 @@
 .news-list {
-  padding: 3rem 3rem 5rem 3rem;
+  padding: 1rem 0;
   @include media-breakpoint-up(sm) {
+    padding: 3rem 3rem 5rem 3rem;
+
+    .card {
+      margin-top: 2rem;
+      padding: 2rem;
+      text-decoration: none;
+      background-color: $clr-white;
+      transition: $tr;
+      &__wrap {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__img {
+        img {
+          width: 400px;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+      &__title {
+        h4 {
+          margin-top: 0;
+          color: $clr-red;
+          font-size: 1.5rem;
+          text-transform: none;
+        }
+      }
+      &__date {
+        margin-top: 1rem;
+        span {
+          color: $clr-gray-text-dark;
+          font-size: 1.1rem;
+        }
+      }
+      &__text {
+        margin-top: 1rem;
+        p {
+          color: $clr-black;
+          font-size: 1rem;
+        }
+      }
+    }
   }
   .card {
-    margin-top: 2rem;
-    padding: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
     text-decoration: none;
     background-color: $clr-white;
     transition: $tr;
@@ -14,30 +56,31 @@
     }
     &__img {
       img {
-        width: 400px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
       }
     }
     &__title {
       h4 {
+        margin-top: 1rem;
         color: $clr-red;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-transform: none;
       }
     }
     &__date {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       span {
         color: $clr-gray-text-dark;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
       }
     }
     &__text {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
       p {
         color: $clr-black;
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
     }
   }

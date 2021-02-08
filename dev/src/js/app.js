@@ -68,10 +68,20 @@ $(function ($) {
   $(document).on("click touchend", "#calc, #openCalcModal", function (e) {
     e.preventDefault();
 
-    $.fancybox.open($("#modalCalc"));
+    $.fancybox.open({
+      src: "#modalCalc",
+      opts: {
+        css: {},
+      },
+    });
   });
   $(document).on("click touchend", "#openModalPhone", function (e) {
     e.preventDefault();
-    $.fancybox.open($("#modalPhone"));
+    $.fancybox.open({
+      src: $("#modalPhone"),
+      opts: {
+        caption: "test",
+      },
+    });
   });
 });

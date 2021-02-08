@@ -1,9 +1,138 @@
 .calc {
-  padding: 2rem;
+  padding: 1rem 0;
+
+  @include media-breakpoint-up(sm) {
+    padding: 2rem;
+
+    &__title {
+      margin-bottom: 2rem;
+      color: $clr-red;
+      font-size: 2.5rem;
+    }
+    &__subtitle {
+      margin-bottom: 1rem;
+      color: $clr-red;
+      font-size: 1.2rem;
+      span {
+        color: $clr-black;
+      }
+      &--disabled {
+        color: $clr-disabled;
+      }
+    }
+    &__form {
+    }
+    &__field {
+      margin-top: 2rem;
+    }
+    &__radio {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: inherit;
+      gap: 1rem;
+    }
+    .r-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 1rem;
+      background-color: $clr-white;
+      cursor: pointer;
+      img {
+        display: block;
+      }
+
+      label {
+        color: $clr-black;
+        font-size: 1rem;
+      }
+      &.active {
+        border: 2px solid $clr-red;
+        label {
+          color: $clr-red;
+        }
+      }
+    }
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      height: 3rem;
+      padding: 0.2rem 1rem;
+      font-size: 1.2rem;
+      background-color: $clr-white;
+      border: 1px solid $clr-border;
+      &.input__disabled {
+        width: 200px;
+        background: $clr-gray;
+      }
+      &:active,
+      &:focus {
+        border: 1px solid darken($color: $clr-border, $amount: 20%);
+        outline: none;
+      }
+    }
+    .result {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+      padding: 1rem;
+      background: $clr-white;
+      border: 2px solid $clr-black;
+      h4 {
+        margin: 0;
+      }
+
+      &__text {
+        color: $clr-black;
+        font-size: 1.5rem;
+        span.error {
+          color: $clr-red;
+          font-size: 1rem;
+        }
+      }
+      &__btn {
+        padding: 1rem 2rem;
+        &:hover {
+          color: $clr-red;
+          text-decoration: none;
+          background-color: transparent;
+        }
+      }
+    }
+    .calc__btn-group {
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+      &__item {
+        &.active {
+          button {
+            border: 2px solid $clr-red;
+          }
+        }
+        button {
+          width: 100px;
+          color: $clr-black;
+          background-color: transparent;
+          border: 2px solid darken($clr-gray, 20%);
+          &.active {
+            border: 2px solid $clr-red;
+          }
+        }
+      }
+    }
+    input[type="radio"] {
+      display: none;
+    }
+  }
 
   &__title {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     color: $clr-red;
+    font-size: 1.5rem;
   }
   &__subtitle {
     margin-bottom: 1rem;
@@ -19,22 +148,30 @@
   &__form {
   }
   &__field {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   &__radio {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.2rem;
   }
   .r-toggle {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
     align-items: center;
+    align-items: center;
+    width: 100%;
     padding: 1rem;
     background-color: $clr-white;
     cursor: pointer;
 
+    img {
+      display: none;
+    }
+
     label {
+      margin-bottom: 0;
       color: $clr-black;
       font-size: 1rem;
     }
@@ -57,10 +194,11 @@
       width: 200px;
       background: $clr-gray;
     }
-    &:active, &:focus{
-        outline: none;
-        border: 1px solid darken($color: $clr-border, $amount: 20%);
-      }
+    &:active,
+    &:focus {
+      border: 1px solid darken($color: $clr-border, $amount: 20%);
+      outline: none;
+    }
   }
   .result {
     display: flex;

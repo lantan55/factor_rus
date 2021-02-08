@@ -2,11 +2,11 @@
   .modal__wrap
     .container
       .row.justify-content-center.align-items-center
-        .col-md-8
+        .col-12.col-md-8
           h2 ОТПРАВЬТЕ ЗАЯВКУ ДЛЯ ТОЧНОГО РАСЧЕТА
           form(action="")
             .row
-              .col-md-6
+              .col-12.col-md-6
                 h4 КОНТАКТЫ:
                 .row
                   .col-md-12
@@ -17,21 +17,22 @@
                     input.input-field(type="text" id="phone" placeholder="Ваш телефон")
                   .col-md-12
                     input.input-field(type="text" id="email" placeholder="Ваш email")
-                  .col-md-12
-                    button.c-btn.form__btn(role="submit") Отправить
-              .col-md-6
+              .col-12.col-md-6
                 h4 ДЕТАЛИ ЗАКАЗА:
                 .row
                   .col-md-12
                     input.input-field(type="date" id="date"  placeholder="Срок изготовления")
                   .col-md-12
                     textarea.input-field.input-field--area( id="text" placeholder="Прочая информация о заказе")
-                  .col-md-12
-                    p.form__notice Нажимая на кнопку, вы даете согласие на обработку персональных данных 
+            .row
+              .col-12.col-md-6
+                button.c-btn.form__btn(role="submit") Отправить
+              .col-12.col-md-6
+                p.form__notice Нажимая на кнопку, вы даете согласие на обработку персональных данных 
 #modalPhone.modal
   .modal__wrap.container
     .row.justify-content-center.align-items-center
-      .col-md-6
+      .col-12.col-md-6
         h2 Заказать обратный звонок
         form(action="")
           .row

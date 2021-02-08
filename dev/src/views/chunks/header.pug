@@ -27,23 +27,31 @@ header.header
       nav.top-menu.col-md-9.offset-md-3
         a.navbar-brand(href='#') 
           img(src="assets/img/icons/calc_hor.png", alt="")
-        #navbarToggler
-          ul.top-menu__list
+        a.toggle-btn(href="#")
+          img(src="assets/img/icons/menu.png", alt="")
+        #navbarSupportedContent
+          ul
             each item in menu
               if item.submenu
-                li.top-menu__item.dropdown
-                  a.top-menu__link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') #{item.title}
+                li.dropdown
+                  a.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') #{item.title}
                   ul.dropdown-menu(aria-labelledby='')
                     each subitem in item.submenu
-                      li.dropdown-item
-                        a.dropdown-link( href=subitem.href ) #{subitem.title}
+                      li
+                        a( href=subitem.href ) #{subitem.title}
               else
-                li.top-menu__item
-                  a.top-menu__link( href=item.href ) #{item.title}      
-    //- .row.header__toolbar.toolbar
-    //-   .col-12.toolbar__list
-    //-     .toolbar__item
-    //-       img(src="assets/img/icons/calc_hor.png", alt="")
-    //-     .toolbar__item
-    //-       img(src="assets/img/icons/menu.png", alt="")
-        
+                li
+                  a( href=item.href ) #{item.title}  
+    nav#sidebarNav
+      ul
+        each item in menu
+          if item.submenu
+            li
+              a(href="#") #{item.title}
+              ul
+                each subitem in item.submenu
+                  li
+                    a( href=subitem.href ) #{subitem.title}
+          else
+            li
+              a( href=item.href ) #{item.title}        

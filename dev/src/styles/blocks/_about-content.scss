@@ -1,23 +1,56 @@
 .about-content {
+  @include media-breakpoint-up(sm) {
+    .about-list {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      &--dark {
+        background-color: $clr-gray-light;
+      }
+      &__content {
+        padding: 2rem 4rem;
+      }
+      &__img {
+        padding: 2rem;
+      }
+    }
+    h2 {
+      margin-bottom: 2rem;
+      color: $clr-red;
+      font-size: 2.5rem;
+      text-align: left;
+    }
+    p {
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+
   .about-list {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     &--dark {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
       background-color: $clr-gray-light;
     }
     &__content {
-      padding: 2rem 4rem;
+      padding: 0;
     }
     &__img {
-      padding: 2rem;
+      padding: 0;
+
+      img {
+        width: 100%;
+      }
     }
   }
   h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: $clr-red;
+    font-size: 1.5rem;
   }
   p {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
