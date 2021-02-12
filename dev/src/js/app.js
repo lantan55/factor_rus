@@ -1,3 +1,4 @@
+import "./jquery.markitup";
 import "./carousel";
 import "@fancyapps/fancybox";
 import "@fancyapps/fancybox/dist/jquery.fancybox.css";
@@ -65,23 +66,34 @@ $(function ($) {
         .text(result + " руб");
     }
   });
-  $(document).on("click touchend", "#calc, #openCalcModal", function (e) {
+  $(document).on("click touchend", "#calc, .openModalCalc", function (e) {
     e.preventDefault();
 
     $.fancybox.open({
-      src: "#modalCalc",
-      opts: {
-        css: {},
-      },
+      src: $("#modalCalc"),
+      type: "html",
     });
   });
-  $(document).on("click touchend", "#openModalPhone", function (e) {
+  $(document).on("click touchend", ".openModalCallback", function (e) {
     e.preventDefault();
     $.fancybox.open({
-      src: $("#modalPhone"),
-      opts: {
-        caption: "test",
-      },
+      src: $("#modalCallback"),
+      type: "html",
     });
+  });
+
+  const $productList = $(".j-product");
+  const $showMoreBtn = $(".production-list__btn");
+
+  if ($productList.length) {
+    if ($productList.length > 6) {
+      $productList.slice(6).hide();
+    } else {
+      $showMoreBtn.hide();
+    }
+  }
+  $(document).on("click touchend", ".production-list__btn", function () {
+    $productList.siblings().show();
+    $(this).hide();
   });
 });

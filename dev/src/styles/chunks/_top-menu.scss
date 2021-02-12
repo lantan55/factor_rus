@@ -26,6 +26,11 @@
           color: $clr-red;
         }
       }
+      &.active {
+        a {
+          color: $clr-red;
+        }
+      }
     }
   }
   .navbar-brand {
@@ -144,6 +149,11 @@
           transition: $tr;
 
           &:hover {
+            color: $clr-red;
+          }
+        }
+        &.active {
+          a {
             color: $clr-red;
           }
         }

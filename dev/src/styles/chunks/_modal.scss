@@ -98,3 +98,19 @@
     padding: 3rem;
   }
 }
+
+.fancybox-slide--html {
+  padding: 1rem !important;
+}
+.modal.fancybox-content {
+  max-width: 800px;
+  max-height: 800px;
+}
+
+.input-field ~ span {
+  color: $clr-red;
+  font-size: 0.7rem;
+}
+.input-field.error {
+  border: 1px solid $clr-red !important;
+}
